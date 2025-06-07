@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Sito Vetrina TCG</title>
   <style>
     body {
@@ -13,16 +13,13 @@
     h1 {
       text-align: center;
     }
-    .search-bar {
-      display: flex;
-      justify-content: center;
-      margin-bottom: 20px;
-    }
-    .search-bar input {
-      width: 300px;
+    #searchInput {
+      display: block;
+      margin: 0 auto 20px auto;
       padding: 10px;
+      width: 300px;
+      border-radius: 5px;
       border: 1px solid #ccc;
-      border-radius: 8px;
       font-size: 16px;
     }
     .product-grid {
@@ -38,10 +35,6 @@
       width: 250px;
       padding: 15px;
       text-align: center;
-      transition: transform 0.2s;
-    }
-    .product-card:hover {
-      transform: scale(1.03);
     }
     .product-card img {
       width: 100%;
@@ -68,89 +61,96 @@
 </head>
 <body>
 
-  <h1>Benvenuto in TCG ROOM ITALIA</h1>
+  <h1>Benvenuto nel mio Sito Vetrina</h1>
 
-  <!-- Barra di ricerca -->
-  <div class="search-bar">
-    <input type="text" id="searchInput" placeholder="Cerca un prodotto..." onkeyup="searchProducts()">
-  </div>
+  <input type="text" id="searchInput" placeholder="Cerca un prodotto..." />
 
   <div class="product-grid" id="productGrid">
 
-    <!-- Esempi con immagini -->
-    <div class="product-card">
-      <img src="album_italian_brainrot.jpg" alt="Album Italian Brainrot">
+    <!-- Album di Italian Brainrot -->
+    <div class="product-card" data-name="album di italian brainrot">
+      <img src="album_italian_brainrot.jpg" alt="Album Italian Brainrot" />
       <h3>Album di Italian Brainrot</h3>
       <a class="telegram-button" href="https://t.me/tcgroom" target="_blank">Contattami su Telegram</a>
     </div>
 
-    <div class="product-card">
-      <img src="box_italian_brainrot.jpg" alt="Box Italian Brainrot">
+    <!-- Box da 24 bustine di Italian Brainrot -->
+    <div class="product-card" data-name="box da 24 bustine di italian brainrot">
+      <img src="box_italian_brainrot.jpg" alt="Box Italian Brainrot" />
       <h3>Box da 24 bustine di Italian Brainrot</h3>
       <a class="telegram-button" href="https://t.me/tcgroom" target="_blank">Contattami su Telegram</a>
     </div>
 
-    <div class="product-card">
-      <img src="bustine_italian_brainrot.jpg" alt="Bustine Italian Brainrot">
+    <!-- Bustine di Italian Brainrot -->
+    <div class="product-card" data-name="bustine di italian brainrot">
+      <img src="bustine_italian_brainrot.jpg" alt="Bustine Italian Brainrot" />
       <h3>Bustine di Italian Brainrot</h3>
       <a class="telegram-button" href="https://t.me/tcgroom" target="_blank">Contattami su Telegram</a>
     </div>
 
-    <div class="product-card">
-      <img src="etb_cronoforze_acquecrespe.jpg" alt="ETB Cronoforze Acquecrespe">
+    <!-- ETB Cronoforze Acquecrespe -->
+    <div class="product-card" data-name="etb cronoforze acquecrespe">
+      <img src="etb_cronoforze_acquecrespe.jpg" alt="ETB Cronoforze Acquecrespe" />
       <h3>ETB Cronoforze Acquecrespe</h3>
       <a class="telegram-button" href="https://t.me/tcgroom" target="_blank">Contattami su Telegram</a>
     </div>
 
-    <div class="product-card">
-      <img src="TINARTGALITA.jpg" alt="Tin Articuno di Galar">
+    <!-- Tin Articuno di Galar -->
+    <div class="product-card" data-name="tin articuno di galar">
+      <img src="TINARTGALITA.jpg" alt="Tin Articuno di Galar" />
       <h3>Tin Articuno di Galar (Pokémon)</h3>
       <a class="telegram-button" href="https://t.me/tcgroom" target="_blank">Contattami su Telegram</a>
     </div>
 
-    <div class="product-card">
-      <img src="IMG-4754.jpg" alt="Bustine di Scintille Folgoranti">
+    <!-- Bustine di Scintille Folgoranti -->
+    <div class="product-card" data-name="bustine di scintille folgoranti">
+      <img src="IMG-4754.jpg" alt="Bustine di Scintille Folgoranti" />
       <h3>Bustine di Scintille Folgoranti</h3>
       <a class="telegram-button" href="https://t.me/tcgroom" target="_blank">Contattami su Telegram</a>
     </div>
 
-    <!-- Prodotti senza immagine -->
-    <div class="product-card">
+    <!-- Bustine di Avventure Insieme -->
+    <div class="product-card" data-name="bustine di avventure insieme">
       <h3>Bustine di Avventure Insieme</h3>
       <a class="telegram-button" href="https://t.me/tcgroom" target="_blank">Contattami su Telegram</a>
     </div>
 
-    <div class="product-card">
+    <!-- Bustine di Ossidiana Infuocata -->
+    <div class="product-card" data-name="bustine di ossidiana infuocata">
       <h3>Bustine di Ossidiana Infuocata</h3>
       <a class="telegram-button" href="https://t.me/tcgroom" target="_blank">Contattami su Telegram</a>
     </div>
 
-    <div class="product-card">
+    <!-- Bustine di Paradosso Temporale -->
+    <div class="product-card" data-name="bustine di paradosso temporale">
       <h3>Bustine di Paradosso Temporale</h3>
       <a class="telegram-button" href="https://t.me/tcgroom" target="_blank">Contattami su Telegram</a>
     </div>
 
-    <div class="product-card">
+    <!-- Bustine di Rivali Predestinati -->
+    <div class="product-card" data-name="bustine di rivali predestinati">
       <h3>Bustine di Rivali Predestinati</h3>
       <a class="telegram-button" href="https://t.me/tcgroom" target="_blank">Contattami su Telegram</a>
     </div>
 
   </div>
 
-  <footer style="text-align:center; margin-top:40px; color:#666;">
-    <p>TCG Room Italia</p>
-  </footer>
-
   <script>
-    function searchProducts() {
-      const input = document.getElementById('searchInput').value.toLowerCase();
-      const cards = document.getElementsByClassName('product-card');
+    const searchInput = document.getElementById('searchInput');
+    const productGrid = document.getElementById('productGrid');
+    const products = productGrid.getElementsByClassName('product-card');
 
-      for (let i = 0; i < cards.length; i++) {
-        const title = cards[i].getElementsByTagName('h3')[0].innerText.toLowerCase();
-        cards[i].style.display = title.includes(input) ? '' : 'none';
-      }
-    }
+    searchInput.addEventListener('input', function() {
+      const filter = this.value.toLowerCase();
+      Array.from(products).forEach(product => {
+        const name = product.getAttribute('data-name');
+        if (name.includes(filter)) {
+          product.style.display = '';
+        } else {
+          product.style.display = 'none';
+        }
+      });
+    });
   </script>
 
 </body>
